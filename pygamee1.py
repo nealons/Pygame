@@ -5,6 +5,8 @@ from pygame.sprite import *
 from random import *
 import os, sys
 
+#Hold down your mouse in terminal to move the paddle, in Idle it should just work by moving the mouse
+
 #colors I hope you enjoy them I put a lot of thought into them
 leather = (205, 133, 63)
 mustard = (255, 215, 0)
@@ -114,9 +116,9 @@ score = 0 #score variable initializes
 background = pygame.Surface(gameDisplay.get_size()) #creates background
 
 
-#pygame.mixer.init(frequency=22050, size=-16, channels=2, buffer=4096)
-#bg_music = pygame.mixer.Sound("Michigan.wav")
-#pygame.mixer.Sound.play(bg_music, loops = 0)
+pygame.mixer.init(frequency=22050, size=-16, channels=2, buffer=4096)
+bg_music = pygame.mixer.Sound("Michigan.wav")
+pygame.mixer.Sound.play(bg_music, loops = 0)
 
 bricks = pygame.sprite.Group() #sprite lists
 ball = pygame.sprite.Group()
